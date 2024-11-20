@@ -11,19 +11,19 @@ import { getPlayer } from '@asledgehammer/pipewrench';
 import * as Events from '@asledgehammer/pipewrench-events';
 
 // Example reference API.
-import { 
- //addRedSquare, 
-  //alertObjectsAdded, 
-  greetPlayer 
-} from './api/ExampleAPI';
+// import { 
+//  //addRedSquare, 
+//   //alertObjectsAdded, 
+//   greetPlayer 
+// } from '../example/api/ExampleAPI';
 import { sayHello } from './HelloPipeWrench';
 
 // Add all initialization code here.
-Events.onGameStart.addListener(() => {
-  //addRedSquare();
-  greetPlayer(getPlayer());
-  //alertObjectsAdded();
-});
+// Events.onGameStart.addListener(() => {
+//   //addRedSquare();
+//   //greetPlayer(getPlayer());
+//   //alertObjectsAdded();
+// });
 
 Events.everyOneMinute.addListener(() => {
   sayHello();
