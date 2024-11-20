@@ -1,4 +1,5 @@
-media/lua/
 node_modules/
 dist/
 ~/
+mod.info
+.github/

@@ -13,22 +13,22 @@ import { IsoObject, IsoPlayer } from '@asledgehammer/pipewrench';
 import * as Events from '@asledgehammer/pipewrench-events';
 
 // Example API.
-import { TSUIRedSquare } from './TSUIRedSquare';
+//import { TSUIRedSquare } from './TSUIRedSquare';
 
 /**
  * @param object The object to stringify.
  * @returns A string of the object's name, x, y, and z coordinates.
  */
-export function isoObjectToString(object: IsoObject): string {
-  return `{name: ${object.getObjectName()}, x: ${object.getX()}, y: ${object.getY()}, z: ${object.getZ()}}`;
-}
+// export function isoObjectToString(object: IsoObject): string {
+//   return `{name: ${object.getObjectName()}, x: ${object.getX()}, y: ${object.getY()}, z: ${object.getZ()}}`;
+// }
 
 /**
  * Adds a red square element to the UI using the example ISUI typings.
  */
-export function addRedSquare() {
-  new TSUIRedSquare(512, 256, 256, 256);
-}
+// export function addRedSquare() {
+//   new TSUIRedSquare(512, 256, 256, 256);
+// }
 
 /**
  * @param player The player to greet.
@@ -40,10 +40,10 @@ export function greetPlayer(player: IsoPlayer) {
 /**
  * Registers the 'OnObjectAdded' Lua event and prints objects that are added to the world.
  */
-export function alertObjectsAdded() {
-  Events.onObjectAdded.addListener((object: IsoObject) => {
-    if (object != null) {
-      print(`IsoObject added: ${isoObjectToString(object)}`);
-    }
-  });
-}
+// export function alertObjectsAdded() {
+//   Events.onObjectAdded.addListener((object: IsoObject) => {
+//     if (object != null) {
+//       print(`IsoObject added: ${isoObjectToString(object)}`);
+//     }
+//   });
+// }
