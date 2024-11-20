@@ -7,8 +7,10 @@
  */
 
 // PipeWrench API.
-import { getPlayer } from '@asledgehammer/pipewrench';
-import * as Events from '@asledgehammer/pipewrench-events';
+import * as Events from '@asledgehammer/pipewrench-events'
+import { sayHello } from './HelloPipeWrench'
+
+let gameIsActive: boolean = false
 
 // Example reference API.
 // import { 
@@ -16,17 +18,16 @@ import * as Events from '@asledgehammer/pipewrench-events';
 //   //alertObjectsAdded, 
 //   greetPlayer 
 // } from '../example/api/ExampleAPI';
-import { sayHello } from './HelloPipeWrench';
 
-// Add all initialization code here.
-// Events.onGameStart.addListener(() => {
-//   //addRedSquare();
-//   //greetPlayer(getPlayer());
-//   //alertObjectsAdded();
-// });
 
-Events.everyOneMinute.addListener(() => {
-  sayHello();
+// Add all initialization code here
+// will run into errors if attemping to interact w/ player before onGameStart
+Events.onGameStart.addListener(() => {
+  gameIsActive = true
+  print(`----- GAME IS ACTIVE! -----`)
+  sayHello()
 })
+
+
 
 

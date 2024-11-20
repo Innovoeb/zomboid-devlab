@@ -2,12 +2,15 @@
 
 
 import { getPlayer, IsoPlayer } from '@asledgehammer/pipewrench'
+import * as Events from '@asledgehammer/pipewrench-events'
 
 
-let player: IsoPlayer = getPlayer()
+export const sayHello = (): void => {
+    let player: IsoPlayer = getPlayer()
 
-export const sayHello = () => {
-    player.setHaloNote("Hello Zomboid!", 500.00);
+    Events.everyOneMinute.addListener(() => {
+        player.setHaloNote("Hey Bitch, What's Happenin!", 500.00)
+    })
 }
 
 
